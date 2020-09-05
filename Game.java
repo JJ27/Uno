@@ -7,6 +7,9 @@ public class Game{
   public Card getCurr(){
     return current;
   }
+  public void setCurr(Card c){
+    this.current = c;
+  }
   public boolean check(Card c1, Card c2){
     if(c1.getColor().equals(c2.getColor()) || c1.getNum() == c2.getNum())
       return true;

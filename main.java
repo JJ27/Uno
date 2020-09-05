@@ -12,5 +12,10 @@ public class main{
     String p2 = name.nextLine();
     Hand h1 = new Hand(p1);
     Hand h2 = new Hand(p2);
+    System.out.println("Ready to start(press enter)");
+    String trash = name.nextLine();
+    name.close();
+    System.out.println("Starting...");
+
   }
 }
