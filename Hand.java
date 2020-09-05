@@ -4,9 +4,9 @@ public class Hand extends Game{
   private String owner;
   public Hand(String owner){
     this.owner = owner;
-    Game g = new Game();
+    Game g2 = new Game();
     for(int i = 0; i < 7; i++){
-      hand.add(g.draw());
+      hand.add(g2.draw());
     }
   }
   public String toString(){

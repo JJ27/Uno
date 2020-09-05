@@ -1,4 +1,4 @@
-public class Card extends Game{
+public class Card{
   private String color;
   private int n;
   private String action;
@@ -17,7 +17,8 @@ public class Card extends Game{
     return action;
   }
   public boolean checkCard(Card other){
-    return check(this, other);
+    Game temp = new Game();
+    return temp.check(this, other);
   }
   public String toString(){
     String fin = "";
