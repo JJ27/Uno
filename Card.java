@@ -1,4 +1,4 @@
-public class Card{
+public class Card extends Game{
   private String color;
   private int n;
   private String action;
@@ -16,22 +16,17 @@ public class Card{
   public String getAction(){
     return action;
   }
-  public boolean check(Card other){
-    if(color.equals(other.getColor()) || n == other.getNum())
-      return true;
-    if(other.getAction().equals("Wild") || other.getAction.equals("+4"))
-      return true;
-    if(action.charAt(0).equals("+") && other.getAction.charAt(0).equals("+"))
-      return true;
-    return false;
+  public boolean checkCard(Card other){
+    return check(this, other);
   }
   public String toString(){
-    if(!action.isEmpty() && !color.isEmpty())
-      return action + " " + color + " " + n;
-    else if(!action.isEmpty())
-      return action;
-    else if(action.isEmpty())
-      return color + " " + n;
-    return "Error";
+    String fin = "";
+    if(!action.isEmpty())
+      fin += action + " ";
+    if(!color.isEmpty())
+      fin += color + " ";
+    if(n >= 0)
+      fin += n;
+    return fin;
   }
 }
