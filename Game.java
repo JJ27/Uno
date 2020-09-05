@@ -1,6 +1,11 @@
+import java.util.Random;
 public class Game{
+  private Card current;
   public Game(){
-
+    this.current = draw();
+  }
+  public Card getCurr(){
+    return current;
   }
   public boolean check(Card c1, Card c2){
     if(c1.getColor().equals(c2.getColor()) || c1.getNum() == c2.getNum())
@@ -12,9 +17,10 @@ public class Game{
     return false;
   }
   public Card draw(){
-    int num = (int)(Math.random() * 10);
-    int c = (int)(Math.random() * 4);
-    int w = (int)(Math.random() * 100);
+    Random rand = new Random();
+    int num = rand.nextInt(9) + 1;
+    int c = rand.nextInt(3) + 1;
+    int w = rand.nextInt(100) + 1;
     String color = "";
     String action = "";
     switch(c){
