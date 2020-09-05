@@ -33,25 +33,25 @@ public class Game{
       default:
         System.out.println("Error in Color Draw!");
     }
-    if(w > 85){
+    if(w > 90){
       color = "";
       action = "+4Wild";
       num = -1;
     }
-    if(w > 70){
+    else if(w > 80){
       color = "";
       action = "Wild";
       num = -1;
     }
-    if(w > 60){
+    else if(w > 70){
       action = "Reverse";
       num = -1;
     }
-    if(w > 50){
+    else if(w > 60){
       action = "Skip";
       num = -1;
     }
-    if(w > 40){
+    else if(w > 50){
       action = "+2";
       num = -1;
     }
