@@ -1,11 +1,19 @@
 import java.util.*;
 public class Hand extends Game{
-  private ArrayList<Card> hand;
+  private ArrayList<Card> hand = new ArrayList<Card>();
   private String owner;
   public Hand(String owner){
     this.owner = owner;
+    Game g = new Game();
     for(int i = 0; i < 7; i++){
-      //Add random hand draw here
+      hand.add(g.draw());
     }
+  }
+  public String toString(){
+    String s = owner + "'s Hand:\n";
+    for(Card c: hand){
+      s += c + "\n";
+    }
+    return s;
   }
 }
