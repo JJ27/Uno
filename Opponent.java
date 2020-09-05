@@ -15,6 +15,7 @@ public class Opponent
         move = hand[x];
       }
       if (x == hand.length && move = -1)
+      {
         hand.pickup();
       }
       if (x < hand.length)
