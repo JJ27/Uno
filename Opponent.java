@@ -5,7 +5,6 @@ public class Opponent
   public static void main (String[]args)
   {
     Hand hand;
-
     //move
     Card move = -1;
     int x = 0;
@@ -16,7 +15,6 @@ public class Opponent
         move = hand[x];
       }
       if (x == hand.length && move = -1)
-      {
         hand.pickup();
       }
       if (x < hand.length)
