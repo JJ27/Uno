@@ -1,16 +1,17 @@
-import Hand;
-
 public class Opponent
 {
-  public static void main (String[]args)
-  {
-    Hand hand;
+  private Game g;
+  public Opponent(Game g){
+    this.g = g;
+  }
+  public void play(){
+    Hand oH = new Hand("Opponent");
     //move
-    Card move = -1;
+    int move;
     int x = 0;
     while (move = -1)
     {
-      if (hand[x].color == topcard.color)
+      if (Hand.getHand()[x].getColor() == g.getCurr.color)
       {
         move = hand[x];
       }

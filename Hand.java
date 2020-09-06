@@ -9,6 +9,9 @@ public class Hand extends Game{
       hand.add(g.draw());
     }
   }
+  public ArrayList<Card> getHand(){
+    return hand;
+  }
   public String toString(){
     String s = owner + "'s Hand:\n";
     for(Card c: hand){
