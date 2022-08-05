@@ -11,12 +11,12 @@ public class Game{
     this.current = c;
   }
   public boolean check(Card c1, Card c2){
-    if(c1.getColor().equals(c2.getColor()) || c1.getNum() == c2.getNum())
+    if((c1.getColor().equals(c2.getColor()) && (!c1.getColor().isEmpty())) || c1.getNum() == c2.getNum())
       return true;
     if(c2.getAction().equals("Wild") || c2.getAction().equals("+4"))
       return true;
-    if(c1.getAction().charAt(0) == '+' && c2.getAction().charAt(0) == '+')
-      return true;
+    /*if(c1.getAction().charAt(0) == '+' && c2.getAction().charAt(0) == '+')
+      return true;*/
     return false;
   }
   public Card draw(){
